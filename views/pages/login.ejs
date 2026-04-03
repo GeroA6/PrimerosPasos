@@ -1,0 +1,32 @@
+
+<%-include('../partials/head.ejs') %>
+
+<body>
+    <%-include('../partials/header.ejs') %>
+    <main>
+        <div class="box-form">
+        <form class="form" action="./index.html">
+            <h2 class="form-titulo">Inicia Sesión</h2>
+            <p class="form-texto">¿Aun no tienes una cuenta? <a href="./register.html" class="form-link">Entra aquí</a></p>
+            <div class="form-contenedor">
+                <div class="form-grupo">
+                    <input type="text" id="usuario" class="form-input" placeholder=" ">
+                    <label for="ususario" class="form-label">Usuario</label>
+                    <span class="form-line"></span>
+                </div>
+                <div class="form-grupo">
+                    <input type="password" id="contraseña" class="form-input" placeholder=" ">
+                    <label for="constraseña" class="form-label">Contraseña</label>
+                    <span class="form-line"></span>
+                </div>
+                <input type="submit" class="form-submit" value="Siguiente">
+            </div>
+        </form>
+    </div>
+    </main>    
+    
+    <%-include('../partials/footer.ejs') %>
+
+</body>
+
+</html>
