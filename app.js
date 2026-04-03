@@ -1,15 +1,31 @@
-//importamos la dependencia
+// 1. Importamos Express para crear el servidor y Path para gestionar rutas de archivos
 const express = require('express');
+const path = require('path');
 
-//instanciamos nuestra app
+// 2. Creamos la instancia de la aplicación Express
 const app = express();
 
-//configuramos la ruta raiz
-app.get('/',
-    (req, res) => res.send("Hola Mundo")
-);
+// 3. Definimos el puerto donde escuchará el servidor (común en desarrollo local)
+const port = 3000;
 
-//iniciamos el servidor
-app.listen(3000, 
-    ()=> console.log("Servidor corriendo en el puerto 3000")
-);
+// 4. Configuramos el motor de plantillas
+// 'views' le dice a Express dónde están los archivos .ejs (usamos ruta absoluta con path.join)
+app.set("views", path.join(__dirname, "views"));
+// 'view engine' establece EJS como nuestra herramienta para generar el HTML dinámico
+app.set("view engine", "ejs");
+
+// 5. Configuramos la carpeta de archivos estáticos (CSS, imágenes, JS del cliente)
+// Al usar path.join(__dirname, "public"), el servidor siempre encontrará tus estilos
+app.use(express.static(path.join(__dirname, "public")));
+
+// 6. Definimos la ruta raíz (cuando alguien entra a http://localhost:3000/)
+app.get('/', (req, res) => {
+    // res.render busca en la carpeta 'views' el archivo 'pages/index.ejs' y lo envía al navegador
+    res.render("pages/index");
+});
+
+// 7. Arrancamos el servidor
+app.listen(port, () => {
+    // Nota: Usamos comillas invertidas (backticks) `` para que ${port} imprima el número 3000
+    console.log(`Servidor corriendo en el puerto: ${port}`);
+});
