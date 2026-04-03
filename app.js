@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
     res.render("pages/index");
 });
 
+app.get('/login', (req, res) => {
+    res.render("pages/login");
+})
+
 // 7. Arrancamos el servidor
 app.listen(port, () => {
     // Nota: Usamos comillas invertidas (backticks) `` para que ${port} imprima el número 3000
