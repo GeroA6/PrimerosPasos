@@ -27,6 +27,9 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.render("pages/login");
 })
+app.get('/register', (req, res) => {
+    res.render("pages/register");
+});
 
 // 7. Arrancamos el servidor
 app.listen(port, () => {
