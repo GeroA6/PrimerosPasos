@@ -1,7 +1,29 @@
 <header>
     <div class="header-nav">
         <a href="/" class="header-a">
-            <img class="header-img1" src="/img/Negratone2.png">
+            <img class="img1" src="/img/Negratone2.png">
+            
+            <% if (!isAuthPage) { %>
+                <img class="img2" src="/img/logo-negratone2.png">
+            <% } %>
         </a>
+
+        <% if (!isAuthPage) { %>
+            <div class="header-search">
+                <input type="text" placeholder="Buscar productos...">
+                <a href="#" class="fa-solid fa-magnifying-glass"></a>
+            </div>
+
+            <div class="box-icons">
+                <div class="icon">
+                    <a href="/cart" class="fa-solid fa-cart-shopping"></a>
+                </div>
+                <div class="icon">    
+                    <a href="/profile" class="fa-solid fa-user">
+                        <p>Perfil</p>
+                    </a>
+                </div>
+            </div>
+        <% } %>
     </div>
 </header>

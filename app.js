@@ -21,14 +21,14 @@ app.use(express.static(path.join(__dirname, "public")));
 // 6. Definimos la ruta raíz (cuando alguien entra a http://localhost:3000/)
 app.get('/', (req, res) => {
     // res.render busca en la carpeta 'views' el archivo 'pages/index.ejs' y lo envía al navegador
-    res.render("pages/index");
+    res.render("pages/index", {isAuthPage: false});
 });
 
 app.get('/login', (req, res) => {
-    res.render("pages/login");
+    res.render("pages/login", {isAuthPage: true});
 })
 app.get('/register', (req, res) => {
-    res.render("pages/register");
+    res.render("pages/register", {isAuthPage: true});
 });
 
 // 7. Arrancamos el servidor
