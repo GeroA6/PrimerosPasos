@@ -24,9 +24,26 @@ app.get('/', (req, res) => {
     res.render("pages/index", {isAuthPage: false});
 });
 
+app.get('/cart', (req, res) => {
+    res.render("pages/cart", {isAuthPage: true});
+});
+
+app.get('/checkout', (req, res) => {
+    res.render("pages/checkout", {isAuthPage: false});
+});
+
 app.get('/login', (req, res) => {
     res.render("pages/login", {isAuthPage: true});
 })
+
+app.get('/product', (req, res) => {
+    res.render("pages/product", {isAuthPage: false});
+});
+
+app.get('/profile', (req, res) => {
+    res.render("pages/profile", {isAuthPage: true});
+});
+
 app.get('/register', (req, res) => {
     res.render("pages/register", {isAuthPage: true});
 });
