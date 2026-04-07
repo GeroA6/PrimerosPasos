@@ -1,68 +1,6 @@
 <%- include('../partials/global/head')%>
 <body>
     <%- include('../partials/organisms/header')%>
-    <main>
-        <a class="top-a" href="./index">
-            <i class="fa-solid fa-arrow-left"></i>
-            <p>Volver al listado</p>
-            <i class="fa-solid fa-caret-right"></i>
-            <p>Carrito</p>
-        </a>
-        <h2 class="carrito-tittle">Productos en tu Carrito</h2>
-        <div class="container-carrito">
-            <div class="carrito-producto">
-                <div class="producto-left">
-                    <img src="./img/producto-jack.jpg" alt="">
-                    <p>Whiskey Jack Daniels Honey 750ml</p>
-                </div>
-                <div class="producto-right">
-                    <a href="">Quitar</a>
-                    <div class="boton">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
-                    </div>
-                    <h1>19.900</h1>
-                </div>
-            </div>
-            <div class="carrito-producto">
-                <div class="producto-left">
-                    <img src="./img/deyuno-clasico.jpeg" alt="">
-                    <p>Desayuno Clásico</p>
-                </div>
-                <div class="producto-right">
-                    <a href="">Quitar</a>
-                    <div class="boton">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
-                    </div>
-                    <h1>5.000</h1>
-                </div>
-            </div>
-            <div class="carrito-producto">
-                <div class="producto-left">
-                    <img src="./img/deyuno-clasico.jpeg" alt="">
-                    <p>Desayuno Clásico</p>
-                </div>
-                <div class="producto-right">
-                    <a href="">Quitar</a>
-                    <div class="boton">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
-                    </div>
-                    <h1>1.520</h1>
-                </div>
-            </div>
-            <div class="carrito-end">
-                <h3>Productos en tu Carrito</h3>
-                <h1>26.420</h1>
-            </div>
-            <div class="carrito-end">
-                <a class="boton-end" href="/checkout">Ir a Pagar</a>
-            </div>
-        </div>
-    </main>
+    <%- include('../partials/organisms/carro')%>
     <%- include('../partials/organisms/footer')%>
 </body>
