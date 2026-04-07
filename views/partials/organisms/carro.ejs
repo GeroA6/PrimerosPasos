@@ -1,0 +1,37 @@
+<main>
+    <a class="top-a" href="./">
+        <i class="fa-solid fa-arrow-left"></i>
+        <p>Volver al listado</p>
+        <i class="fa-solid fa-caret-right"></i>
+        <p>Carrito</p>
+    </a>
+    <h2 class="carrito-tittle">Productos en tu Carrito</h2>
+    
+    <div class="container-carrito">
+        <%- include('../molecules/cartItem', { 
+            imgSrc: './img/producto-jack.jpg', 
+            title: 'Whiskey Jack Daniels Honey 750ml', 
+            price: '19.900' 
+        }) %>
+        
+        <%- include('../molecules/cartItem', { 
+            imgSrc: './img/deyuno-clasico.jpeg', 
+            title: 'Desayuno Clásico', 
+            price: '5.000' 
+        }) %>
+        
+        <%- include('../molecules/cartItem', { 
+            imgSrc: './img/deyuno-clasico.jpeg', 
+            title: 'Desayuno Clásico', 
+            price: '1.520' 
+        }) %>
+        
+        <div class="carrito-end">
+            <h3>Productos en tu Carrito</h3>
+            <h1>26.420</h1>
+        </div>
+        <div class="carrito-end">
+            <a class="boton-end" href="/checkout">Ir a Pagar</a>
+        </div>
+    </div>
+</main>
