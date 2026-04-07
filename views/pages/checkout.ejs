@@ -1,0 +1,56 @@
+<%- include('../partials/global/head')%>
+<body>
+    <%- include('../partials/organisms/header')%>
+    <main>
+        <div class="main-checkout">
+            <form action="" class="checkout__form">
+                <div class="form__articulos">
+                    <article class="articulos__articulo">
+                        <h3 class="seccion__titulo">Dirección de Envió</h3>
+                        <section class="articulo__datos">
+                            <label for="nombre" class="datos__text"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+                            <input type="text" id="nombre" class="articulo__input">
+                        </section>
+                        <section class="articulo__datos">
+                            <label for="direccion" class="datos__text"><i class="fa-solid fa-house"></i> Dirección</label>
+                            <input type="text" class="articulo__input">
+                        </section>
+                        <section class="articulo__datos">
+                            <label for="ciudad" class="datos__text"><i class="fa-solid fa-city icono"></i> Ciudad</label>
+                            <input type="text" class="articulo__input">
+                        </section>
+                    </article>
+                    
+                    <article class="articulos__articulo">
+                        <h3 class="seccion__titulo">Datos de pago</h3>
+                        <section class="articulo__datos">
+                            <label for="nombre-tarjeta" class="datos__text"><i class="fa-solid fa-user"></i> Nombre de la tarjeta</label>
+                            <input type="text" id="nombre" class="articulo__input">
+                        </section>
+                        <section class="articulo__datos">
+                            <label for="numero-tarjeta" class="datos__text"><i class="fa-solid fa-house"></i> Numero de la tarjeta</label>
+                            <input type="number" class="articulo__input">
+                        </section>
+                        <section class="articulo__datos">
+                            <label for="fecha-tarjeta" class="datos__text"><i class="fa-solid fa-city"></i> Fecha de expiración</label>
+                            <input type="date" class="articulo__input">
+                        </section>
+                    </article>
+                </div>
+                <label for="condiciones" class="form__condiciones"><input type="checkbox"> Acepta los términos y condiciones</label>
+                <button class="form__continuar">Continuar con el pago</button>
+            </form>
+            <aside class="checkout__aside">
+                <div class="box__aside">
+                    <h3 class="aside__titulo">Carrito <span class="aside__precio"><i class="fa-solid fa-cart-shopping"></i>3</span></h3>
+                    <p><a href="">Producto 1</a> <span class="aside__precio">$19.900</span></p>
+                    <p><a href="">Producto 2</a> <span class="aside__precio">$5.000</span></p>
+                    <p><a href="">Producto 3</a> <span class="aside__precio">$1.520</span></p>
+                    <hr>
+                    <p>Total<span class="aside__precio"><b>$26.420</b></span></p>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <%- include('../partials/organisms/footer')%>
+</body>

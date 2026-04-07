@@ -30,6 +30,9 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.render("pages/register", {isAuthPage: true});
 });
+app.get('/cart', (req, res) => {
+    res.render("pages/cart", {isAuthPage: false});
+});
 
 // 7. Arrancamos el servidor
 app.listen(port, () => {
