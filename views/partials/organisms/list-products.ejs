@@ -1,27 +1,30 @@
 <section class="section-productos">
-            <div class="contenedor-productos">
-                <h2>Los más pedidos</h2>
-                <div class="box-productos">
-                    <%- include('../molecules/product-card', { 
-                        imagen: '/img/producto-jack.jpg', 
-                        nombre: 'Jack Daniels Old No. 7', 
-                        puntos: '45.000' 
-                    }) %>
-                    <%- include('../molecules/product-card', { 
-                        imagen: '/img/producto-defoult.jpg', 
-                        nombre: 'Fideos Lucchetti 500g', 
-                        puntos: '2.500' 
-                    }) %>
-                    <%- include('../molecules/product-card', { 
-                        imagen: '/img/producto-defoult.jpg', 
-                        nombre: 'Fideos Lucchetti 500g', 
-                        puntos: '2.500' 
-                    }) %>
-                    <%- include('../molecules/product-card', { 
-                        imagen: '/img/producto-defoult.jpg', 
-                        nombre: 'Fideos Lucchetti 500g', 
-                        puntos: '2.500' 
-                    }) %>
-                </div>
-            </div>
-         </section>
+    <div class="contenedor-productos">
+        <div class="box-productos">
+            <%- include('../molecules/product-card', { 
+                link: './product', 
+                imgSrc: './img/producto-jack.jpg', 
+                title: 'Whiskey Jack<br>Daniels Honey<br>750ml', 
+                puntos: '19.900' 
+            }) %>
+    
+            <%- include('../molecules/product-card', { 
+                imgSrc: './img/producto-defoult.jpg', 
+                title: 'Nombre del<br>producto o<br>servicio', 
+                puntos: 'xx.xxx' 
+            }) %>
+
+            <%- include('../molecules/product-card', { 
+                imgSrc: './img/producto-defoult.jpg', 
+                title: 'Nombre del<br>producto o<br>servicio', 
+                puntos: 'xx.xxx' 
+            }) %>
+
+            <%- include('../molecules/product-card', { 
+                imgSrc: './img/producto-defoult.jpg', 
+                title: 'Nombre del<br>producto o<br>servicio', 
+                puntos: 'xx.xxx' 
+            }) %>
+        </div>
+    </div>
+</section>

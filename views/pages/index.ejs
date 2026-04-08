@@ -2,10 +2,16 @@
 <body>
     <%- include('../partials/organisms/header')%>
     <main>
-        <%- include('../partials/organisms/navbar') %>
+        <%- include('../partials/organisms/nav-bar') %>
         <%- include('../partials/organisms/publicidad') %>
-        <%- include('../partials/organisms/productSection') %>
-        <%- include('../partials/organisms/navbar') %>
+         <section class="section-productos">
+             <div class="contenedor-productos">
+                <%- include('../partials/organisms/list-products') %>
+                <h2>Te puede interesar</h2>
+                <%- include('../partials/organisms/list-products') %>
+             </div>
+         </section>
+        <%- include('../partials/organisms/nav-bar') %>
     </main>
     <%- include('../partials/organisms/footer')%>
 </body>

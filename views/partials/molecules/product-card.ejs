@@ -1,16 +1,14 @@
-<a href="./product">    
+<a href="<%= locals.link || '#' %>">
     <div class="producto">
         <div class="imagen">
-            <img src="<%= imagen %>" alt="<%= nombre %>">
+            <img src="<%= imgSrc %>" alt="">
         </div>
         <div class="box-detalles">
-            <h3>
-                <%= nombre %>
-            </h3>
+            <h3><%- title %></h3>
             <hr>
             <div class="producto-detalles">
                 <h3><%= puntos %></h3>
-                <p>PUNTOS</p>                                    
+                <p>PUNTOS</p>
             </div>
         </div>
     </div>
